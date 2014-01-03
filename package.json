@@ -1,7 +1,8 @@
 {
   "name": "validations",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "private": false,
+  "main": "./dist/validations.js",
   "devDependencies": {
     "fatjs": "~0.1.0",
     "grunt": "~0.4.0"
