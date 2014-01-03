@@ -1,0 +1,23 @@
+{
+  "name": "validations",
+  "description": "The best project ever.",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "MIT",
+  "copyright": "First + Third",
+  "main": "dist/validations.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "assert": "*",
+    "blanket": "*"
+  },
+  "ignore": [
+    "test",
+    "example",
+    "lib",
+    "Gruntfile.js",
+    "package.json",
+    "grunt"
+  ]
+}

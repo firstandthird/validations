@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>validations example</title>
+  </head>
+  <body>
+
+    <script src="../dist/validations.js"></script>
+    <script>
+      var validator = new validations({
+        url: function(input) {
+          return validations.validate(input, function(text) {
+            return text.indexOf('htt') === 0;
+          }, 'url');
+        }
+      });
+
+      console.log('required has input', validations.required('test'));
+      console.log('required no input', validations.required(''));
+
+      console.log('email valid', validations.email('email@example.com'));
+      console.log('email invalid', validations.email('fakeatfake.com'));
+
+      console.log('password valid', validations.password('V3ZjuXLLxnUR9y'));
+      console.log('password invalid', validations.password('pass'));
+
+      console.log('passwordConfirm valid', validations.passwordConfirm('V3ZjuXLLxnUR9y', 'V3ZjuXLLxnUR9y'));
+      console.log('passwordConfirm invalid', validations.passwordConfirm('pass', 'V3ZjuXLLxnUR9y'));
+
+      console.log('passwordStrength secure', validations.passwordStrength('V3ZjuXLLxnUR9y'));
+      console.log('passwordStrength moderate', validations.passwordStrength('iEad2mc9E'));
+      console.log('passwordStrength weak', validations.passwordStrength('pass'));
+
+      console.log('custom url valid', validations.url('http://google.com'));
+      console.log('custom url invalid', validations.url('google.com'));
+    </script>
+  </body>
+</html>
