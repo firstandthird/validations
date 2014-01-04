@@ -17,10 +17,10 @@
     var i, c;
 
     for(i = 0, c = text.length; i < c; i++) {
-      if(!lower && /[a-z]/.text(text)) {
+      if(!lower && /[a-z]/.test(text)) {
         count += 26;
         lower = true;
-      } else if(!upper && /[A-Z]/.text(text)) {
+      } else if(!upper && /[A-Z]/.test(text)) {
         count += 26;
         upper = true;
       } else if(!number && /\d/.test(text)) {
@@ -46,7 +46,7 @@
 
     if(typeof customValidators === 'object') {
       for(validator in customValidators) {
-        if(!valid[validator]) {
+        if(!validations[validator]) {
           validations[validator] = customValidators[validator];
         }
       }
@@ -73,13 +73,13 @@
   };
 
   validations.required = function(input) {
-    return valid.validate(input, function(text) {
+    return validations.validate(input, function(text) {
       return text.length > 0;
     }, 'required');
   };
 
   validations.email = function(input) {
-    return valid.validate(input, /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/, 'email');
+    return validations.validate(input, /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/, 'email');
   };
 
   validations.password = function(input, method) {
@@ -87,13 +87,11 @@
       return text.length > 5;
     };
 
-    return valid.validate(input, method, 'password');
+    return validations.validate(input, method, 'password');
   };
 
   validations.passwordConfirm = function(input, confirm) {
-    var target;
-
-    return valid.validate(input, confirm, 'password-confirm');
+    return validations.validate(input, confirm, 'password-confirm');
   };
 
   validations.passwordStrength = function(password, secureThreshold) {
