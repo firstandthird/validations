@@ -1,8 +1,8 @@
 
 /*!
- * validations - The best project ever.
- * v0.0.1
- * 
+ * validations - Utility lib to do string validations
+ * v0.0.2
+ * https://github.com/firstandthird/validations
  * copyright First + Third 2014
  * MIT License
 */
