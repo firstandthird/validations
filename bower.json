@@ -1,8 +1,8 @@
 {
   "name": "validations",
-  "description": "The best project ever.",
+  "description": "Utility lib to do string validations",
   "version": "0.0.2",
-  "homepage": "",
+  "homepage": "https://github.com/firstandthird/validations",
   "license": "MIT",
   "copyright": "First + Third",
   "main": "dist/validations.js",
