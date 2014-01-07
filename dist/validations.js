@@ -1,7 +1,7 @@
 
 /*!
  * validations - Utility lib to do string validations
- * v0.0.2
+ * v0.0.3
  * https://github.com/firstandthird/validations
  * copyright First + Third 2014
  * MIT License

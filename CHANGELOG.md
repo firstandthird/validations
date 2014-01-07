@@ -1,4 +1,11 @@
 
+0.0.3 / 2014-01-07 
+==================
+
+  * chore(dist): rebuilt
+  * feat(bower): more meta data
+  * feat(grunt): don't generate full files
+
 0.0.2 / 2014-01-03
 ==================
 
