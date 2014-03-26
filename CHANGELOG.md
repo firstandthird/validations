@@ -1,4 +1,9 @@
 
+0.0.4 / 2014-03-26 
+==================
+
+  * added support for capital letters in email address
+
 0.0.3 / 2014-01-07 
 ==================
 

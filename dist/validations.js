@@ -1,7 +1,6 @@
-
 /*!
  * validations - Utility lib to do string validations
- * v0.0.3
+ * v0.0.4
  * https://github.com/firstandthird/validations
  * copyright First + Third 2014
  * MIT License
@@ -79,7 +78,7 @@
   };
 
   validations.email = function(input) {
-    return validations.validate(input, /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/, 'email');
+    return validations.validate(input.toLowerCase(), /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/, 'email');
   };
 
   validations.password = function(input, method) {
