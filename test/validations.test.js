@@ -14,6 +14,7 @@ suite('validations', function() {
 
   test('email', function(){
     assert.ok(validations.email('email@example.com').valid);
+    assert.ok(validations.email('Email@Example.com').valid);
     assert.ok(!validations.email('example.com').valid);
   });
 
