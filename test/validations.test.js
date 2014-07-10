@@ -12,6 +12,14 @@ suite('validations', function() {
     assert.ok(!validations.required('').valid);
   });
 
+  test('slug', function(){
+    assert.ok(validations.slug('my-slug-2014').valid);
+    assert.ok(!validations.slug('My-Slug-2014').valid);
+    assert.ok(!validations.slug('my_slug-2014').valid);
+    assert.ok(!validations.slug('my slug 2014').valid);
+    assert.ok(!validations.slug('my-slug-2014!').valid);
+  });
+
   test('email', function(){
     assert.ok(validations.email('email@example.com').valid);
     assert.ok(validations.email('Email@Example.com').valid);
