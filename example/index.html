@@ -19,6 +19,9 @@
       console.log('required has input', validations.required('test'));
       console.log('required no input', validations.required(''));
 
+      console.log('slug valid', validations.slug('my-slug-2014'));
+      console.log('slug invalid', validations.slug('My_Slug 2014'));
+
       console.log('email valid', validations.email('email@example.com'));
       console.log('email invalid', validations.email('fakeatfake.com'));
 
