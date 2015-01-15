@@ -10,6 +10,10 @@ suite('validations', function() {
   test('required', function(){
     assert.ok(validations.required('test').valid);
     assert.ok(!validations.required('').valid);
+    assert.ok(!validations.required(null).valid);
+    assert.ok(!validations.required(['something']).valid);
+    assert.ok(!validations.required({something: 'value'}).valid);
+    assert.ok(!validations.required().valid);
   });
 
   test('slug', function(){
