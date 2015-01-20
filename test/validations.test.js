@@ -14,11 +14,13 @@ suite('validations', function() {
     assert.ok(validations.required(1234).valid);
     assert.ok(validations.required(true).valid);
     assert.ok(validations.required(false).valid);
+    assert.ok(validations.required(' test ').valid);
     assert.ok(!validations.required('').valid);
     assert.ok(!validations.required(null).valid);
     assert.ok(!validations.required().valid);
     assert.ok(!validations.required([]).valid);
     assert.ok(!validations.required().valid);
+    assert.ok(!validations.required(' ').valid);
   });
 
   test('slug', function(){
