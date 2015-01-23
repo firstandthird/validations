@@ -1,4 +1,14 @@
 
+0.0.5 / 2015-01-22
+==================
+
+  * Merge pull request #6 from firstandthird/bug/required
+  * Trims text before checking length
+  * Changed required validation to accept more types.
+  * Check if input is a string before checking length.
+  * Add tests for slug
+  * Add slug validation. Limit to lowercase, dash, numbers.
+
 0.0.4 / 2014-03-26 
 ==================
 
