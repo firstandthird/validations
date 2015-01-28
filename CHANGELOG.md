@@ -1,4 +1,10 @@
 
+0.0.6 / 2015-01-27
+==================
+
+  * Merge pull request #8 from firstandthird/feature/additional-validations
+  * Added max length and url validations
+
 0.0.5 / 2015-01-22
 ==================
 
