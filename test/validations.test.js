@@ -1,8 +1,8 @@
 var validator = new validations({
-  url: function(input) {
+  urlCustom: function(input) {
     return validations.validate(input, function(text) {
       return text.indexOf('htt') === 0;
-    }, 'url');
+    }, 'urlCustom');
   }
 });
 
@@ -53,9 +53,21 @@ suite('validations', function() {
     assert.ok(validations.passwordStrength('pass') < 50);
   });
 
-  test('custom: url', function(){
+  test('max length', function(){
+    assert.ok(validations.maxLength('test', 5).valid);
+    assert.ok(!validations.maxLength('test', 2).valid);
+  });
+  
+  test('url', function(){
     assert.ok(validations.url('http://google.com').valid);
     assert.ok(validations.url('https://google.com').valid);
+    assert.ok(validations.url('https://google.com?query=true').valid);
     assert.ok(!validations.url('google.com').valid);
+  });
+
+  test('custom: urlCustom', function(){
+    assert.ok(validations.urlCustom('http://google.com').valid);
+    assert.ok(validations.urlCustom('https://google.com').valid);
+    assert.ok(!validations.urlCustom('google.com').valid);
   });
 });
