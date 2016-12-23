@@ -4,7 +4,7 @@
   "private": false,
   "main": "./dist/validations.js",
   "devDependencies": {
-    "fatjs": "~0.1.0",
-    "grunt": "~0.4.0"
+    "fatjs": "~0.2.0",
+    "grunt": "~1.0.1"
   }
 }
